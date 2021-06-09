@@ -581,7 +581,7 @@ int main()
 		}
 		else if (masukkan == 'F' || masukkan == 'f')
 		{
-			hm_to(); // 2. lAGI
+			//hm_to(); // 2. lAGI
 		}
 	}
 	
