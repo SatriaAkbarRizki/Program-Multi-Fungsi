@@ -2,13 +2,14 @@
 Program sederhana yang berisi kalkulator,konversi mata uang dan konversi satuan panjang. (Program masih menggunakan CMD / Terminal).
 
                                     Tampilan Program Multi Fungsi
-![Screenshot_2021-06-09_10-45-43](https://user-images.githubusercontent.com/75376635/121290195-65d43d80-c910-11eb-87ff-75552313cc1a.png)
+![Screenshot_2021-06-09_10-45-43](https://user-images.githubusercontent.com/75376635/121548699-6e736380-ca37-11eb-9dfe-8d99354a91c4.png)
 
                                     Tampilan Menu Kalkulator
-![Screenshot 2](https://user-images.githubusercontent.com/75376635/121290236-7edcee80-c910-11eb-8abe-707da56daa21.png)
+![Screenshot 2](https://user-images.githubusercontent.com/75376635/121548761-7e8b4300-ca37-11eb-902f-999df12d9f84.png)
 
                                     Tampilan Menu Konversi Mata Uang
-![Screenshot 3](https://user-images.githubusercontent.com/75376635/121290248-81d7df00-c910-11eb-84cd-b139b682d33d.png)
+![Screenshot 3](https://user-images.githubusercontent.com/75376635/121548823-8b0f9b80-ca37-11eb-8eb6-24f8a2691294.png)
 
                                     Tampilan Menu Konversi Satuan Panjang
-![Screenshot 4](https://user-images.githubusercontent.com/75376635/121290313-97e59f80-c910-11eb-8fb4-50b531813601.png)
+![Screenshot 4](https://user-images.githubusercontent.com/75376635/121548872-92cf4000-ca37-11eb-8d14-ae9dd6df79e0.png)
+
