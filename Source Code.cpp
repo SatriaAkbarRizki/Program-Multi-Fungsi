@@ -76,6 +76,7 @@ void belum_buat()
 
 void Changelog()
 {
+	system("clear");
 	int nomor [5] ={1,2,3,4,5};
 	cout << "15-2-2021" << endl;
 	for(int i = 1;i <= 10;i++)
@@ -106,8 +107,8 @@ void Changelog()
 	cout <<"\n";
 	    cout << nomor[0] << " Perbaiki Bug" << endl;
 	    cout << nomor[1] << " Perbaiki Tampilan Multi_Fungsi yang tidak rapi" << endl;
-	    cout << nomor[1] << " Menghapus Mata uang AED (Uni Emirat Arab) dari Program_multi" << endl;
-	    cout << nomor[2] << " Penambahan fitur Exit Di menu Multi_Fungsi" << endl;
+	    cout << nomor[2] << " Menghapus Mata uang AED (Uni Emirat Arab) dari Program_multi" << endl;
+	    cout << nomor[3] << " Penambahan fitur Exit Di menu Multi_Fungsi" << endl;
 
 	cout << "\n";
 	cout << "2-4-2021" << endl;
@@ -122,9 +123,18 @@ void Changelog()
 	for(int i = 1;i <= 10;i++)
 		cout << "*";
 	cout << endl;
-	    cout << nomor[1] << " Perbaiki Tata letak program" << endl;
-	    cout << nomor[0] << " Penambahan fitur kembali disetiap program" << endl;
+	    cout << nomor[0] << " Perbaiki Tata letak program" << endl;
+	    cout << nomor[1] << " Penambahan fitur kembali disetiap program" << endl;
 	    cout << nomor[2] << " Perbaiki Kesalahan huruf di setiap program" << endl;
+
+	cout << "\n";
+	cout << "10-6-2021" << endl;
+	for(int i = 1;i <= 10;i++)
+		cout << "*";
+	cout << endl;
+	     cout << nomor[0] << " Menghapus Fitur konversi bilangan sistem dari Program_multi_Fungsi " << endl;
+	     cout << nomor[1] << " Penambahan Fitur Konversi Satuan panjang di Program_multi_Fungsi" << endl;
+	     cout << nomor[2] << " Perbaiki Kesalahan huruf di setiap program" << endl;
 }
 
 int USD()
@@ -259,11 +269,12 @@ int Ringgit()
 
 int cm_to()
 {
-	int cm;
-	int hasilnya;
+	float cm;
+	float hasilnya;
 	char pilihan;
+	string j_satuan;
 		system("clear");
-		cout << "A. Cm ke mm \nB. Cm ke Dm \nC. Cm ke M \nD. Cm ke Dam \nE. Cm ke hm \nF. Cm ke Km" << endl;
+		cout << "A. Cm ke Mm \nB. Cm ke Dm \nC. Cm ke M \nD. Cm ke Dam \nE. Cm ke Hm \nF. Cm ke Km" << endl;
 		cout << "Masukkan Pilihan anda: ";
 		cin >> pilihan;
 		system("clear");
@@ -272,28 +283,34 @@ int cm_to()
 		if (pilihan == 'A' || pilihan == 'a')
 		{
 			hasilnya = cm * 10;
+			j_satuan = "Mm";
 		}
 		else if (pilihan == 'B' || pilihan == 'b')
 		{
 			hasilnya = cm / 10;
+			j_satuan = "Dm";
 		}
 		else if (pilihan == 'C' || pilihan == 'c')
 		{
 			hasilnya = cm / pow(10,2);
+			j_satuan = "M";
 		}
 		else if (pilihan == 'D' || pilihan == 'd')
 		{
 			hasilnya = cm / pow (10,3);
+			j_satuan = "Dam";
 		}
 		else if (pilihan  == 'E' || pilihan == 'e')
 		{
 			hasilnya = cm / pow (10,4);
+			j_satuan = "Hm";
 		}
 		else if (pilihan == 'F' || pilihan == 'f')
 		{
 			hasilnya = cm / pow (10,5);
+			j_satuan = "Km";
 		}
-		cout << "Hasilnya adalah: " << hasilnya << endl;
+		cout << "Nilai " << j_satuan << " adalah: " << hasilnya << endl;
 		return hasilnya;
 }
 
@@ -302,8 +319,10 @@ int Mm_to()
 	float Mm;
 	float hasilnya;
 	char pilihan;
+	string j_satuan;
 	system("clear");
-	cout << "A. Mm ke cm \nB. Mm ke dm \nC. Mm ke m \nD. Mm ke Dam \nE. Mm ke hm \nF. Mm ke Km" << endl;
+
+	cout << "A. Mm ke Cm \nB. Mm ke Dm \nC. Mm ke M \nD. Mm ke Dam \nE. Mm ke Hm \nF. Mm ke Km" << endl;
 	cout << "Masukkan pilihan anda: ";
 	cin >> pilihan;
 	system("clear");
@@ -313,28 +332,34 @@ int Mm_to()
 	if (pilihan == 'A' || pilihan == 'a')
 	{
 		hasilnya = Mm / 10;
+		j_satuan = "Cm";
 	}
 	else if (pilihan == 'B' || pilihan == 'b')
 	{
 		hasilnya = Mm / pow(10,2);
+		j_satuan = "Dm";
 	}
 	else if (pilihan == 'C' || pilihan == 'c')
 	{
 		hasilnya = Mm / pow (10,3);
+		j_satuan = "M";
 	}
 	else if (pilihan == 'D' || pilihan == 'd')
 	{
 		hasilnya = Mm / pow (10,4);
+		j_satuan = "Dam";
 	}
 	else if (pilihan == 'E' || pilihan == 'e')
 	{
 		hasilnya = Mm / pow (10,5);
+		j_satuan = "Hm";
 	}
 	else if (pilihan == 'F' || pilihan == 'f')
 	{
 		hasilnya = Mm / pow (10,6);
+		j_satuan = "Km";
 	}
-	cout << "Hasilnya adalah: " << hasilnya << endl;
+	cout << "Nilai " << j_satuan << " adalah: " << hasilnya << endl;
 	return hasilnya;
 }
 
@@ -343,9 +368,10 @@ int Dm_to()
 	float Dm;
 	float hasilnya;
 	char pilihan;
-
+	string j_satuan;
 	system("clear");
-	cout << "A. Dm ke cm \nB. Dm ke Mm \nC. Dm ke M \nD. Dm ke dam \nE. Dm ke hm \nF. Dm ke Km" << endl;
+
+	cout << "A. Dm ke Cm \nB. Dm ke Mm \nC. Dm ke M \nD. Dm ke Dam \nE. Dm ke Hm \nF. Dm ke Km" << endl;
 	cout << "Masukkan pilihan anda; ";
 	cin >> pilihan;
 	system("clear");
@@ -355,28 +381,35 @@ int Dm_to()
 	if (pilihan == 'A' || pilihan == 'a')
 	{
 		hasilnya = Dm * 10;
+		j_satuan = "Cm";
 	}
 	else if (pilihan == 'B' || pilihan == 'b')
 	{
 		hasilnya = Dm * pow(10,2);
+		j_satuan = "Mm";
 	}
 	else if (pilihan == 'C' || pilihan == 'c')
 	{
 		hasilnya = Dm / 10;
+		j_satuan = "M";
 	}
 	else if (pilihan == 'D' || pilihan == 'd')
 	{
 		hasilnya = Dm / pow (10,2);
+		j_satuan = "Dam";
 	}
 	else if (pilihan == 'E' || pilihan == 'e')
 	{
 		hasilnya = Dm / pow (10,3);
+		j_satuan = "Hm";
 	}
 	else if (pilihan == 'F' || pilihan == 'f')
 	{
 		hasilnya = Dm / pow (10,4);
+		j_satuan = "Km";
 	}
-	cout << "Hasilnya adalah: " << hasilnya << endl;
+	cout << "Nilai " << j_satuan << " adalah: " << hasilnya << endl;
+	return hasilnya;
 
 }
 
@@ -385,9 +418,10 @@ int M_to()
 	float M;
 	float hasilnya;
 	char pilihan;
+	string j_satuan;
 	system("clear");
 
-	cout << "A. M ke Dam \nB. M ke hm \nC. M ke Km \nD. M ke dm \nE. M ke cm \n F. M ke mm" << endl;
+	cout << "A. M ke Dam \nB. M ke Hm \nC. M ke Km \nD. M ke Dm \nE. M ke Cm \n F. M ke Mm" << endl;
 	cout << "Masukkan pilihan anda: ";
 	cin >> pilihan;
 
@@ -397,28 +431,35 @@ int M_to()
 	if (pilihan == 'A' || pilihan == 'a')
 	{
 		hasilnya = M * 10;
+		j_satuan = "Dam";
 	}
 	else if (pilihan == 'B' || pilihan == 'b')
 	{
 		hasilnya = M * pow(10,2);
+		j_satuan = "Hm";
 	}
 	else if (pilihan == 'C' || pilihan == 'c')
 	{
 		hasilnya = M * pow (10,3);
+		j_satuan = "Km";
 	}
 	else if (pilihan == 'D' || pilihan == 'd')
 	{
 		hasilnya = M / 10;
+		j_satuan = "Dm";
 	}
 	else if (pilihan == 'E' || pilihan == 'e')
 	{
 		hasilnya = M / pow (10,2);
+		j_satuan = "Dm";
 	}
 	else if (pilihan == 'F' || pilihan == 'f')
 	{
 		hasilnya = M / pow (10,3);
+		j_satuan = "Mm";
 	}
-	cout << "Hasilnya adalah: " << hasilnya << endl;
+	cout << "Nilai " << j_satuan << " adalah: " << hasilnya << endl;
+	return hasilnya;
 }
 
 int Dam_to()
@@ -426,9 +467,10 @@ int Dam_to()
 	float Dam;
 	float hasilnya;
 	char pilihan;
+	string j_satuan;
 	system("clear");
 
-	cout << "A. Dam ke hm \nB. Dam ke Km \nC. Dam ke m \nD. Dam ke cm  \nE. Dam ke mm" << endl;
+	cout << "A. Dam ke Hm \nB. Dam ke Km \nC. Dam ke M \nD. Dam ke Cm  \nE. Dam ke Mm" << endl;
 	cout << "Masukkan Pilihan anda: ";
 	cin >> pilihan;
 	system("clear");
@@ -438,29 +480,131 @@ int Dam_to()
 	if (pilihan == 'A' || pilihan == 'a')
 	{
 		hasilnya = Dam / 10;
+		j_satuan = "Hm";
 	}
 	else if (pilihan == 'B' || pilihan == 'b')
 	{
 		hasilnya = Dam / pow(10,2);
+		j_satuan = "Km";
 	}
 	else if (pilihan == 'C' || pilihan == 'c')
 	{
 		hasilnya = Dam *  10;
+		j_satuan = "M";
 	}
 	else if (pilihan == 'D' || pilihan == 'd')
 	{
 		hasilnya = Dam * pow(10,2);
+		j_satuan = "Cm";
 	}
 	else if (pilihan == 'E' || pilihan == 'e')
 	{
 		hasilnya = Dam * pow (10,3);
+		j_satuan = "Mm";
+	}
+	cout << "Nilai " << j_satuan << " adalah: " << hasilnya << endl;
+	return hasilnya;
+
+}
+
+int hm_to()
+{
+	float hm;
+	float hasilnya;
+	char pilihan;
+	string j_satuan;
+	system("clear");
+
+	cout << "A. Hm ke Km \nB. Hm ke Dam \nC. Hm ke M \nD. Hm ke Dm \nE. Hm ke Cm \nF. Hm ke Mm" << endl;
+	cout << "Masukkan pilihan anda: ";
+	cin >> pilihan;
+	system("clear");
+
+	cout << "Masukkan nilai hmL: ";
+	cin >> hm;
+	if (pilihan == 'A' || pilihan == 'a')
+	{
+		hasilnya = hm / 10;
+		j_satuan = "Km";
+	}
+	else if (pilihan == 'B' || pilihan == 'b')
+	{
+		hasilnya  = hm * 10;
+		j_satuan = "Dam";
+	}
+	else if (pilihan == 'C' || pilihan == 'c')
+	{
+		hasilnya = hm * pow (10,2);
+		j_satuan = "M";
+	}
+	else if (pilihan == 'D' || pilihan == 'd')
+	{
+		hasilnya = hm * pow (10,3);
+		j_satuan = "Dm";
+	}
+	else if (pilihan == 'E' || pilihan == 'e')
+	{
+		hasilnya = hm * pow (10,4);
+		j_satuan = "Cm";
 	}
 	else if (pilihan == 'F' || pilihan == 'f')
 	{
-		hasilnya = Dam * pow (10,4);
+		hasilnya = hm * pow (10,5);
+		j_satuan = "Mm";
 	}
-	cout << "Hasilnya adalah: " << hasilnya << endl;
 
+	cout << "Nilai " << j_satuan << " adalah: " << hasilnya << endl;
+	return hasilnya;
+}
+
+int km_to()
+{
+	float km;
+	float hasilnya;
+	char pilihan;
+	string j_satuan;
+	system("clear");
+
+	cout << "A. Km ke Hm \nB. Km ke Dam \nC. Km ke M \nD. Km ke Dm \nE. Km ke Cm \nF. Km ke Mm" << endl;
+	cout << "Masukkan pilihan anda: ";
+	cin >> pilihan;
+	system("clear");
+
+	cout << "Masukkan nilai km: ";
+	cin >> km;
+
+	if(pilihan == 'A' || pilihan == 'a')
+	{
+		hasilnya = km / 10;
+		j_satuan = "Hm";
+	}
+	else if (pilihan == 'B' || pilihan == 'b')
+	{
+		hasilnya = km / pow(10,2);
+		j_satuan = "Dam";
+	}
+	else if (pilihan == 'C' || pilihan == 'c')
+	{
+		hasilnya = km / pow (10,3);
+		j_satuan = "M";
+	}
+	else if (pilihan == 'D' || pilihan == 'd')
+	{
+		hasilnya = km / pow (10,4);
+		j_satuan = "Dm";
+	}
+	else if (pilihan == 'E' || pilihan == 'e')
+	{
+		hasilnya = km / pow(10,5);
+		j_satuan = "Cm";
+	}
+	else if (pilihan == 'F' || pilihan =='f')
+	{
+		hasilnya = km / pow (10,6);
+		j_satuan = "Mm";
+	}
+	cout << "Nilai " << j_satuan << " adalah: " << hasilnya << endl;
+	return hasilnya;
 }
 int main()
 {
@@ -471,7 +615,7 @@ int main()
 	system("clear");
 
 	cout << "Menu Multi_Fungsi" << endl;
-	cout << "A. Kalkulator \nB. Konversi Mata Uang \nC. Tangga satuan panjang \nD. Changelog \nE. Exit";
+	cout << "A. Kalkulator \nB. Konversi Mata Uang \nC. Konversi satuan panjang \nD. Changelog \nE. Exit";
 	cout << "\nMasukkan pilihan anda: ";
 	cin >> masukkan;
 	//Kalkulatior
@@ -556,7 +700,7 @@ int main()
 	else if (masukkan == 'C' || masukkan == 'c')
 	{
 		system("clear");
-		cout << "A. Cm Ke.. \nB. Mm ke... \nC. Dm ke... \nD. M ke...\nE. Dam ke... \nF. hm ke... \nG. km ke..." << endl;
+		cout << "A. Cm Ke.. \nB. Mm ke... \nC. Dm ke... \nD. M ke...\nE. Dam ke... \nF. Hm ke... \nG. Km ke... \nH. kembali" << endl;
 		cout << "Masukkan pilihan anda: ";
 		cin >> masukkan;
 		if (masukkan == 'A' || masukkan == 'a')
@@ -581,7 +725,15 @@ int main()
 		}
 		else if (masukkan == 'F' || masukkan == 'f')
 		{
-			//hm_to(); // 2. lAGI
+			hm_to();
+		}
+		else if (masukkan == 'G' || masukkan == 'g')
+		{
+			km_to();
+		}
+		else if (masukkan == 'H' || masukkan == 'h')
+		{
+			goto pindah;
 		}
 	}
 	
