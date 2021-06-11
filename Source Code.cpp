@@ -132,9 +132,10 @@ void Changelog()
 	for(int i = 1;i <= 10;i++)
 		cout << "*";
 	cout << endl;
-	     cout << nomor[0] << " Menghapus Fitur konversi bilangan sistem dari Program_multi_Fungsi " << endl;
-	     cout << nomor[1] << " Penambahan Fitur Konversi Satuan panjang di Program_multi_Fungsi" << endl;
-	     cout << nomor[2] << " Perbaiki Kesalahan huruf di setiap program" << endl;
+		 cout << nomor[0] << " Penambahan Menu About Program" << endl;
+		 cout << nomor[1] << " Perbaiki Kesalahan huruf di setiap program" << endl;
+	     cout << nomor[2] << " Menghapus Fitur konversi bilangan sistem dari Program_multi_Fungsi " << endl;
+	     cout << nomor[3] << " Penambahan Fitur Konversi Satuan panjang di Program_multi_Fungsi" << endl;
 }
 
 int USD()
@@ -310,6 +311,7 @@ int cm_to()
 			hasilnya = cm / pow (10,5);
 			j_satuan = "Km";
 		}
+
 		cout << "Nilai " << j_satuan << " adalah: " << hasilnya << endl;
 		return hasilnya;
 }
@@ -606,6 +608,37 @@ int km_to()
 	cout << "Nilai " << j_satuan << " adalah: " << hasilnya << endl;
 	return hasilnya;
 }
+
+int about_program()
+{
+	for (int a = 1; a <= 80;a++)
+	{
+		cout << "*";
+	}
+
+	for (int b = 1;b  <= 9;b ++)
+		cout << " " << endl;
+	for (int c = 1;c <= 29; c++ )
+		cout << " ";
+	cout << "Program Multi Fungsi " << endl;
+
+	for (int c = 1;c <= 29; c++ )
+		cout << " ";
+	cout << "Versi Program : 1.5 (BETA)" << endl;
+
+	for (int c = 1;c <= 29; c++ )
+		cout << " ";
+	cout << "Dibuat oleh Satria_AR" << endl;
+
+	for (int c = 1;c <= 9; c++ )
+		cout << " " << endl;
+
+
+	for (int a = 1; a <= 80;a++)
+	{
+		cout << "*";
+	}
+}
 int main()
 {
 	char masukkan,masukkan_pengunna,pilihan_1,pilihan_2;
@@ -615,7 +648,7 @@ int main()
 	system("clear");
 
 	cout << "Menu Multi_Fungsi" << endl;
-	cout << "A. Kalkulator \nB. Konversi Mata Uang \nC. Konversi satuan panjang \nD. Changelog \nE. Exit";
+	cout << "A. Kalkulator \nB. Konversi Mata Uang \nC. Konversi satuan panjang \nD. Changelog \nE. About Program \nF. Exit";
 	cout << "\nMasukkan pilihan anda: ";
 	cin >> masukkan;
 	//Kalkulatior
@@ -737,15 +770,20 @@ int main()
 		}
 	}
 	
-	//Changelog
+	
 	else if (masukkan == 'D' || masukkan == 'd')
 	{
 		system("clear");
 		Changelog();
 	}
 
-	//Menu Exit
+	
 	else if (masukkan == 'E' || masukkan == 'e')
+	{
+		system("clear");
+		about_program();
+	}
+	else if (masukkan == 'F' || masukkan == 'f')
 	{
 		system("clear");
 		goto keluar;
